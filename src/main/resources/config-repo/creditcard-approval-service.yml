@@ -1,0 +1,21 @@
+test: 'test'
+spring:
+  application:
+    name: creditcard-approval-service
+  h2:
+    console:
+      enabled: true 
+  datasource:
+    url: 'jdbc:h2:mem:test;DB_CLOSE_DELAY=-1;init=create schema if not exists MCDBO'
+    driverClassName: org.h2.Driver
+    username: sa
+    password: 
+userservice:
+  url: http://localhost:8082/v1/user-service/updateCreditCardRequest      
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: false
+notification:
+  sender: vickyperumalsvp@gmail.com
+
